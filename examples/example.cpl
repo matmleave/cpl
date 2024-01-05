@@ -1,0 +1,31 @@
+right 1 with ! is 
+end
+
+left nat with pr is 
+  0: 1 -> nat;
+  s: nat -> nat; 
+end
+
+right prod(a, b) with pair is
+  pi1: prod -> a; 
+  pi2: prod -> b; 
+end
+
+right exp(a, b) with curry is 
+  eval: prod(exp, a) -> b; 
+end
+
+left list(p) with prl is 
+  nil: 1 -> list; 
+  cons: prod(p, list) -> list; 
+end
+
+left coprod(a, b) with case is
+  in1: a -> coprod;
+  in2: b -> coprod;
+end
+
+right inflist(a) with fold is
+  head: inflist -> a;
+  tail: inflist -> inflist;
+end
